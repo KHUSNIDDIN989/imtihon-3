@@ -1,0 +1,10 @@
+a {
+  text-decoration: none !important;
+}
+.auth {
+  width: 90vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
