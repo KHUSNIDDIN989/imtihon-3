@@ -1,7 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Complexs from "./Companent/complex/complex";
-import Adminall from "./pages/Adminall";
 import Home from "./pages/home";
 import Companys from "./Companent/company/company";
 import Room from "./Companent/room/room";
@@ -13,7 +12,6 @@ const App = () => {
     <div className="container-fluid">
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* <Route path="/admin" element={<Adminall />} /> */}
         <Route path="/company" element={<Companys />} />
         <Route path="/complex" element={<Complexs />} />
         <Route path="/room" element={<Room />} />

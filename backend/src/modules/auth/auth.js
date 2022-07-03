@@ -1,5 +1,6 @@
 import auth from "./model.js";
-import { sign1 } from "jsonwebtoken";
+// import { sign1 } from "jsonwebtoken";
+import { sign } from "../../utils/jwt.js";
 const POST_AUTH = async (req, res) => {
   try {
     const { login, password } = req.body;
@@ -8,15 +9,13 @@ const POST_AUTH = async (req, res) => {
     const foundUser = allUser.find(
       (e) => e.user_name == login && e.user_password == password
     );
-    console.log(
-      sign1({
-        user_id: foundUser.user_id,
-        user_name: foundUser.user_name,
-      })
-    );
+    console.log();
     if (foundUser) {
       return res.json({
-        token: 12121,
+        token: sign({
+          user_id: foundUser.user_id,
+          user_name: foundUser.user_name,
+        }),
         status: "ok",
       });
     }

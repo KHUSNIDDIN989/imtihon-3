@@ -1,14 +1,18 @@
 import React from "react";
 import { Auth1 } from "../../utils/data";
+import { useState } from "react";
 
 const Auth = () => {
+  const [token, setToken] = useState([]);
+
   const handleLogin = (e) => {
     e.preventDefault();
     const { login, password } = e.target.elements;
     Auth1("auth", login.value, password.value).then((data) =>
-      console.log(data.data)
+      setToken(data.data)
     );
   };
+  window.localStorage.setItem("token", token.token);
 
   return (
     <div className="auth ">

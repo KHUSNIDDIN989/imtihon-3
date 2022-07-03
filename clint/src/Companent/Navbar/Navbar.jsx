@@ -13,7 +13,7 @@ const Navbar = () => {
         <NavLink to="/">
           <button className="btn btn-primary">Home Page</button>
         </NavLink>
-        <NavLink to="/admin">
+        <NavLink to="/complex">
           <button className="btn btn-primary">Admin</button>
         </NavLink>
       </div>

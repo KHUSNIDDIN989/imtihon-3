@@ -37,7 +37,6 @@ const Section = () => {
       <h2 className="text-center fs-1 fw-bolder text-light ">
         Choose a house by filtering
       </h2>
-
       <div className="card mt-4">
         <div className="form-control d-flex pt-4">
           <div className="input-group mb-3 flex-column mx-3">
